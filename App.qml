@@ -72,10 +72,78 @@ ApplicationWindow {
             padding: 0
         }
 
+        // 底部工具栏
         Rectangle {
             Layout.fillWidth: true
             height: 60
             color: "#00aaaa"
+            RowLayout {
+                anchors.fill: parent
+                Item {
+                    Layout.preferredWidth: parent.width / 10
+                    Layout.fillWidth: true
+                }
+                Button {
+                    Layout.preferredWidth: 50
+                    icon.source: "qrc:/images/previous"
+                    icon.width: 32
+                    icon.height: 32
+                }
+                Button {
+                    Layout.preferredWidth: 50
+                    icon.source: "qrc:/images/stop"
+                    icon.width: 32
+                    icon.height: 32
+                }
+                Button {
+                    Layout.preferredWidth: 50
+                    icon.source: "qrc:/images/next"
+                    icon.width: 32
+                    icon.height: 32
+                }
+                Item {
+                    Layout.preferredWidth: parent.width / 2
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.topMargin: 25
+                    Text {
+                        id: nameText
+                        anchors.left: slider.left
+                        anchors.bottom: slider.top
+                        Layout.bottomMargin: 15
+                        text: qsTr("xxx-xxx")
+                    }
+                    Text {
+                        id: timeText
+                        anchors.right: slider.right
+                        anchors.bottom: slider.top
+                        Layout.bottomMargin: 15
+                        text: qsTr("00:00/05:30")
+                    }
+                    Slider {
+                        id: slider
+                        width: parent.width
+                        Layout.fillWidth: true
+                        height: 25
+                    }
+                }
+                Button {
+                    Layout.preferredWidth: 50
+                    icon.source: "qrc:/images/favorite"
+                    icon.width: 32
+                    icon.height: 32
+                }
+                Button {
+                    Layout.preferredWidth: 50
+                    icon.source: "qrc:/images/repeat"
+                    icon.width: 32
+                    icon.height: 32
+                }
+                Item {
+                    Layout.preferredWidth: parent.width / 10
+                    Layout.fillWidth: true
+                }
+            }
         }
     }
 }
