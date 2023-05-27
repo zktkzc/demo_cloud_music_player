@@ -7,5 +7,10 @@
         <file>MusicIconButton.qml</file>
         <file>MusicToolButton.qml</file>
         <file>MusicRoundImage.qml</file>
+        <file>DetailRecommendPageView.qml</file>
+        <file>DetailSearchPageView.qml</file>
+        <file>DetailLocalPageView.qml</file>
+        <file>DetailHistoryPageView.qml</file>
+        <file>DetailFavoritePageView.qml</file>
     </qresource>
 </RCC>
