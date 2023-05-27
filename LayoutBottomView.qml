@@ -1,5 +1,5 @@
 import QtQuick 2.15
-import QtQuick.Controls 2.5
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
 Rectangle {
@@ -12,23 +12,23 @@ Rectangle {
             Layout.preferredWidth: parent.width / 10
             Layout.fillWidth: true
         }
-        Button {
+        MusicIconButton {
             Layout.preferredWidth: 50
-            icon.source: "qrc:/images/previous"
-            icon.width: 32
-            icon.height: 32
+            iconSource: "qrc:/images/previous"
+            iconWidth: 32
+            iconHeight: 32
         }
-        Button {
+        MusicIconButton {
             Layout.preferredWidth: 50
-            icon.source: "qrc:/images/stop"
-            icon.width: 32
-            icon.height: 32
+            iconSource: "qrc:/images/stop"
+            iconWidth: 32
+            iconHeight: 32
         }
-        Button {
+        MusicIconButton {
             Layout.preferredWidth: 50
-            icon.source: "qrc:/images/next"
-            icon.width: 32
-            icon.height: 32
+            iconSource: "qrc:/images/next"
+            iconWidth: 32
+            iconHeight: 32
         }
         Item {
             Layout.preferredWidth: parent.width / 2
@@ -85,17 +85,17 @@ Rectangle {
                 }
             }
         }
-        Button {
+        MusicIconButton {
             Layout.preferredWidth: 50
-            icon.source: "qrc:/images/favorite"
-            icon.width: 32
-            icon.height: 32
+            iconSource: "qrc:/images/favorite"
+            iconWidth: 32
+            iconHeight: 32
         }
-        Button {
+        MusicIconButton {
             Layout.preferredWidth: 50
-            icon.source: "qrc:/images/repeat"
-            icon.width: 32
-            icon.height: 32
+            iconSource: "qrc:/images/repeat"
+            iconWidth: 32
+            iconHeight: 32
         }
         Item {
             Layout.preferredWidth: parent.width / 10

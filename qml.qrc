@@ -4,5 +4,6 @@
         <file>LayoutHeaderView.qml</file>
         <file>LayoutBottomView.qml</file>
         <file>PageHomeView.qml</file>
+        <file>MusicIconButton.qml</file>
     </qresource>
 </RCC>
