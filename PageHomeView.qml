@@ -37,15 +37,31 @@ Frame {
     }
     padding: 0
 
-    ListView {
-        id: menuView
-        height: parent.height
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        model: ListModel {
-            id: menuViewModel
+    ColumnLayout {
+        anchors.fill: parent
+
+        Item {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 150
+
+            MusicRoundImage {
+                anchors.centerIn: parent
+                height: 100
+                width: 100
+                borderRadius: 100
+            }
         }
-        delegate: menuViewDelegate
+
+        ListView {
+            id: menuView
+            height: parent.height
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            model: ListModel {
+                id: menuViewModel
+            }
+            delegate: menuViewDelegate
+        }
     }
 
     Component {
