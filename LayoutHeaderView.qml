@@ -11,20 +11,17 @@ ToolBar {
     width: parent.width
     RowLayout {
         anchors.fill: parent
-        ToolButton {
-            icon.source: "qrc:/images/music"
-            width: 32
-            height: 32
+        MusicToolButton {
+            iconSource: "qrc:/images/music"
+            toolTip: "音乐"
         }
-        ToolButton {
-            icon.source: "qrc:/images/about"
-            width: 32
-            height: 32
+        MusicToolButton {
+            iconSource: "qrc:/images/about"
+            toolTip: "关于"
         }
-        ToolButton {
-            icon.source: "qrc:/images/small-screen"
-            width: 32
-            height: 32
+        MusicToolButton {
+            iconSource: "qrc:/images/small-screen"
+            toolTip: "小窗播放"
         }
         Item {
             Layout.fillWidth: true
@@ -34,22 +31,20 @@ ToolBar {
                 text: qsTr("tkzc")
                 font.family: "微软雅黑"
                 font.pointSize: 15
+                color: "#ffffff"
             }
         }
-        ToolButton {
-            icon.source: "qrc:/images/minimize-screen"
-            width: 32
-            height: 32
+        MusicToolButton {
+            iconSource: "qrc:/images/minimize-screen"
+            toolTip: "最小化"
         }
-        ToolButton {
-            icon.source: "qrc:/images/full-screen"
-            width: 32
-            height: 32
+        MusicToolButton {
+            iconSource: "qrc:/images/full-screen"
+            toolTip: "全屏"
         }
-        ToolButton {
-            icon.source: "qrc:/images/power"
-            width: 32
-            height: 32
+        MusicToolButton {
+            iconSource: "qrc:/images/power"
+            toolTip: "退出"
         }
     }
 }
