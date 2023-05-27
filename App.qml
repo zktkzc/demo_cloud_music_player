@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
+import MyUtils 1.0
 
 ApplicationWindow {
     property int mWINDOW_WIDTH: 1200
@@ -13,6 +14,25 @@ ApplicationWindow {
     height: mWINDOW_HEIGHT
     visible: true
     title: qsTr("Demo Cloud Music Player")
+
+    HttpUtils {
+        id: http
+    }
+
+    Component.onCompleted: {
+        textHttp()
+    }
+
+    function textHttp() {
+
+        function onReply(reply) {
+            console.log(reply)
+            http.onReplySignal.diconnect(onReply)
+        }
+
+        http.onReplySignal.connect(onReply)
+        http.connet("banner")
+    }
 
     ColumnLayout {
         anchors.fill: parent

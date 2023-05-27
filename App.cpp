@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QIcon>
 #include <QQmlApplicationEngine>
+#include "httputils.h"
 
 int main(int argc, char *argv[])
 {
@@ -8,6 +9,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
     QGuiApplication app(argc, argv);
+
+    qmlRegisterType<HttpUtils>("MyUtils", 1, 0, "HttpUtils");
 
     // 设置图标
     app.setWindowIcon(QIcon(":/images/music.png"));
