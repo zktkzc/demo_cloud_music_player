@@ -4,8 +4,12 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
 ApplicationWindow {
-    width: 1200
-    height: 800
+    property int mWindow_Width: 1200
+    property int mWindow_Height: 800
+
+    id: window
+    width: mWindow_Width
+    height: mWindow_Height
     visible: true
     title: qsTr("Demo Cloud Music Player")
 
