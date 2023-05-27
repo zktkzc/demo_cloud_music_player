@@ -32,9 +32,9 @@ Frame {
 
     Layout.preferredWidth: 200
     Layout.fillHeight: true
-    background: Rectangle {
-        color: "#f0f0f0"
-    }
+    //    background: Rectangle {
+    //        color: "#f0f0f0"
+    //    }
     padding: 0
 
     ColumnLayout {
@@ -90,6 +90,17 @@ Frame {
                     font.family: window.mFONT_FAMILY
                     font.pointSize: 12
                     color: "#ffffff"
+                }
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    color = "#aa73a7ab"
+                }
+                onExited: {
+                    color = "#00aaaa"
                 }
             }
         }
