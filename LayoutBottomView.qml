@@ -44,7 +44,7 @@ Rectangle {
                 anchors.bottom: slider.top
                 anchors.leftMargin: 5
                 text: qsTr("xxx-xxx")
-                font.family: "微软雅黑"
+                font.family: window.mFONT_FAMILY
                 color: "#ffffff"
             }
             Text {
@@ -53,7 +53,7 @@ Rectangle {
                 anchors.bottom: slider.top
                 anchors.rightMargin: 5
                 text: qsTr("00:00/05:30")
-                font.family: "微软雅黑"
+                font.family: window.mFONT_FAMILY
                 color: "#ffffff"
             }
             // 进度条

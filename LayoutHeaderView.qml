@@ -53,7 +53,7 @@ ToolBar {
             Text {
                 anchors.centerIn: parent
                 text: qsTr("tkzc")
-                font.family: "微软雅黑"
+                font.family: window.mFONT_FAMILY
                 font.pointSize: 15
                 color: "#ffffff"
             }
@@ -71,7 +71,7 @@ ToolBar {
             toolTip: "全屏"
             onClicked: {
                 window.visibility = Window.Maximized
-                visible = false
+                fullScreen.visible = false
                 smallScreen.visible = true
             }
         }
@@ -79,16 +79,20 @@ ToolBar {
             id: smallScreen
             iconSource: "qrc:/images/small-screen"
             toolTip: "退出全屏"
-            visible: fasle
+            visible: false
             onClicked: {
                 setWindowSize()
-                visible = false
+                window.visibility = Window.AutomaticVisibility
+                smallScreen.visible = false
                 fullScreen.visible = true
             }
         }
         MusicToolButton {
             iconSource: "qrc:/images/power"
             toolTip: "退出"
+            onClicked: {
+                Qt.quit()
+            }
         }
     }
 
@@ -124,7 +128,7 @@ ToolBar {
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: 18
                 color: "#8573a7ab"
-                font.family: "微软雅黑"
+                font.family: window.mFONT_FAMILY
                 font.bold: true
             }
             Text {
@@ -133,7 +137,7 @@ ToolBar {
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: 16
                 color: "#8573a7ab"
-                font.family: "微软雅黑"
+                font.family: window.mFONT_FAMILY
                 font.bold: true
             }
             Text {
@@ -142,13 +146,13 @@ ToolBar {
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: 16
                 color: "#8573a7ab"
-                font.family: "微软雅黑"
+                font.family: window.mFONT_FAMILY
                 font.bold: true
             }
         }
     }
 
-    function setWindowSize(width = window.mWindow_Width, height = window.mWindow_Height) {
+    function setWindowSize(width = window.mWINDOW_WIDTH, height = window.mWINDOW_HEIGHT) {
         window.height = height
         window.width = width
         window.x = (Screen.desktopAvailableWidth - window.width) / 2
