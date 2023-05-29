@@ -12,5 +12,6 @@
         <file>DetailLocalPageView.qml</file>
         <file>DetailHistoryPageView.qml</file>
         <file>DetailFavoritePageView.qml</file>
+        <file>MusicBannerView.qml</file>
     </qresource>
 </RCC>

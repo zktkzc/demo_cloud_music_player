@@ -19,21 +19,6 @@ ApplicationWindow {
         id: http
     }
 
-    Component.onCompleted: {
-        textHttp()
-    }
-
-    function textHttp() {
-
-        function onReply(reply) {
-            console.log(reply)
-            http.onReplySignal.diconnect(onReply)
-        }
-
-        http.onReplySignal.connect(onReply)
-        http.connet("banner")
-    }
-
     ColumnLayout {
         anchors.fill: parent
         spacing: 0

@@ -4,6 +4,8 @@ import QtQuick.Layouts 1.3
 import QtQml 2.15
 
 RowLayout {
+    spacing: 0
+
     property var qmlList: [{
             "icon": "recommend-white",
             "value": "推荐内容",
